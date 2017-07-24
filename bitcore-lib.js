@@ -52262,6 +52262,7 @@ bitcore.versionGuard = function(version) {
     throw new Error(message);
   }
 };
+delete global._bitcore; //reset var
 bitcore.versionGuard(global._bitcore);
 global._bitcore = bitcore.version;
 
